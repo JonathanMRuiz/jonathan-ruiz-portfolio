@@ -70,32 +70,28 @@ const Contact = () => {
           className="bg-[#ccd6f6] p-2"
           type="text"
           placeholder="Name"
-          name="user_name"
+          name="to_name"
           required
           autoComplete="off"
         />
+
         <input
           className="my-4 p-2 bg-[#ccd6f6]"
           type="email"
           placeholder="Email"
-          name="user_email"
+          name="from_name"
           value={message}
           onChange={handleChange}
           required
           autoComplete="off"
         />
+        {error && <h2 style={{ color: "red" }}>{error}</h2>}
         <textarea
           className="bg-[#ccd6f6] p-2"
           name="message"
           rows="10"
           placeholder="Message"
         ></textarea>
-        <button
-          type="submit"
-          className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center"
-        >
-          Send
-        </button>
         {loading && (
           <div className="flex text-green-500 justify-center items-center">
             <p>Success</p>
@@ -104,9 +100,14 @@ const Contact = () => {
             </span>
           </div>
         )}
-        <div className="flex justify-center">
-          {error && <h2 style={{ color: "red" }}>{error}</h2>}
-        </div>
+        <button
+          type="submit"
+          className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center"
+        >
+          Send
+        </button>
+
+        <div className="flex justify-center"></div>
       </form>
     </div>
   );

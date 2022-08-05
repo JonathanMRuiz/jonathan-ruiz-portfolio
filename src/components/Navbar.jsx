@@ -29,6 +29,7 @@ const socialIcons = [
 const navList = [
   { name: "Home", path: "home" },
   { name: "About", path: "about" },
+  { name: "Education", path: "education" },
   { name: "Skills", path: "skills" },
   { name: "Works", path: "work" },
   { name: "Contact", path: "contact" },

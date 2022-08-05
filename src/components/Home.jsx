@@ -1,6 +1,7 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
+import Typewriter from "typewriter-effect";
 
 const Home = () => {
   return (
@@ -13,10 +14,19 @@ const Home = () => {
         <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
           I'm a Frontend Developer
         </h2>
-        <p className="text-[#8892b0] py-4 max-w-[700px]">
-          A person proactive, self-taught person, always willing to learn. I
-          like to learn and teach my knowledge once mastered. Ready to work as a
-          team, gain experience and improve my work performance.
+        <p className="text-[#8892b0] py-4 max-w-[700px] text-2xl">
+          <Typewriter
+            options={{
+              strings: [
+                "Web Designer",
+                "React JS Developer",
+                "Javascript Developer",
+                "Responsive Designer",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </p>
         <div>
           <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-700 hover:border-pink-700">
