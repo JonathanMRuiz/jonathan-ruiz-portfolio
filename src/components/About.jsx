@@ -1,4 +1,5 @@
 import React from "react";
+import BtnDownload from "./DownloadPdf/DownloadPdf";
 
 const About = () => {
   return (
@@ -21,8 +22,10 @@ const About = () => {
               A person proactive, self-taught person, always willing to learn. I
               like to learn and teach my knowledge once mastered. Ready to work
               as a team, gain experience and improve my work performance.
+              <BtnDownload />
             </p>
           </div>
+          <div className="flex justify-center items-center"></div>
         </div>
       </div>
     </div>
