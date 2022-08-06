@@ -8,44 +8,47 @@ import RickAndMorty from "../assets/rickandmorty.png";
 const worksData = [
   {
     name: "Challenge Movies DB",
-    img: `${Movies}`,
+    img: Movies,
     url: "https://challenge-moviesdb.vercel.app/",
     code: "https://github.com/JonathanMRuiz/challenge-moviesdb",
   },
   {
     name: "Rick and Morty API",
-    img: `${RickAndMorty}`,
+    img: RickAndMorty,
     url: "https://rick-and-morty-app-red.vercel.app/",
     code: "https://github.com/JonathanMRuiz/rick-and-morty-app",
   },
   {
     name: "Food Store Template",
-    img: `${Food}`,
+    img: Food,
     url: "https://food-store-five.vercel.app/",
     code: "https://github.com/JonathanMRuiz/food-store",
   },
   {
     name: "Login Template with Tailwind CSS",
-    img: `${Login}`,
+    img: Login,
     url: "https://login-template-tailwind.vercel.app/",
     code: "https://github.com/JonathanMRuiz/login-template-tailwind",
   },
   {
     name: "Cards Template with Tailwind CSS",
-    img: `${Cards}`,
+    img: Cards,
     url: "https://price-cards.vercel.app/",
     code: "https://github.com/JonathanMRuiz/card-price-template",
   },
 ];
-const Work = () => {
+const Projects = () => {
   return (
-    <div name="work" className="w-full md:h-screen text-gray-300 bg-[#0a192f]">
+    <div
+      name="projects"
+      className="w-full md:h-screen text-gray-300 bg-[#0a192f]"
+    >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
-            Works
+            Projects
           </p>
-          <p className="py-6">Check out some of my recent work</p>
+          <p className="py-6">Check out some of my recent projects</p>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {worksData.map((work) => (
@@ -79,4 +82,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;

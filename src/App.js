@@ -1,20 +1,22 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
+import Experience from "./components/Experiencie";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import WhatsappComponent from "./components/WhatsappComponent";
-import Work from "./components/Work";
+import Projects from "./components/Projects";
 function App() {
   return (
     <div>
       <Navbar />
       <Home />
       <About />
-      <Education />
+      <Experience />
       <Skills />
-      <Work />
+      <Projects />
+      <Education />
       <Contact />
       <WhatsappComponent />
     </div>

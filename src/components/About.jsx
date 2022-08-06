@@ -19,9 +19,10 @@ const About = () => {
           </div>
           <div>
             <p>
-              A person proactive, self-taught person, always willing to learn. I
-              like to learn and teach my knowledge once mastered. Ready to work
-              as a team, gain experience and improve my work performance.
+              I consider myself a proactive, self-learner, team player person.
+              I’m always willing to learn new technologies and best practices,
+              and share them to the world. Looking forward to get my first
+              opportunity to take the next step in my career.
               <BtnDownload />
             </p>
           </div>
