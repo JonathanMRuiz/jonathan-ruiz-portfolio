@@ -50,7 +50,7 @@ const Navbar = () => {
       </div>
 
       <ul className="hidden md:flex">
-        {navList.map((item) => (
+        {navList.map((item, idx) => (
           <li>
             <Link
               activeClass="active"
@@ -69,15 +69,14 @@ const Navbar = () => {
       <div onClick={handleClickNav} className="md:hidden z-10">
         {!toggleNav ? <FaBars /> : <FaTimes />}
       </div>
-
-      <ul
-        className={
-          !toggleNav
-            ? "hidden"
-            : "absolute top-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
-        }
-      >
-        {navList.map((item) => (
+      {navList.map((item) => (
+        <ul
+          className={
+            !toggleNav
+              ? "hidden"
+              : "absolute top-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
+          }
+        >
           <li className="py-6 text-4xl">
             <Link
               activeClass="active"
@@ -90,8 +89,8 @@ const Navbar = () => {
               {item.name}
             </Link>
           </li>
-        ))}
-      </ul>
+        </ul>
+      ))}
 
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
         <ul>

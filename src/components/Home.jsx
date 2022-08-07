@@ -32,13 +32,13 @@ const Home = () => {
           <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-700 hover:border-pink-700">
             <Link
               activeClass="active"
-              to="work"
+              to="projects"
               spy={true}
               smooth={true}
               offset={50}
               duration={500}
             >
-              View Works
+              View Projects
             </Link>
             <span className="group-hover:rotate-90 duration-300">
               <HiArrowNarrowRight className="ml-3" />
