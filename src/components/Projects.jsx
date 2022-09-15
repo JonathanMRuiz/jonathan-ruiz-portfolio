@@ -4,6 +4,7 @@ import Cards from "../assets/cards.png";
 import Food from "../assets/food.png";
 import Login from "../assets/login.png";
 import RickAndMorty from "../assets/rickandmorty.png";
+import Crud from "../assets/crud.png";
 
 const projectsData = [
   {
@@ -35,6 +36,13 @@ const projectsData = [
     img: Cards,
     url: "https://price-cards.vercel.app/",
     code: "https://github.com/JonathanMRuiz/card-price-template",
+  },
+
+  {
+    name: "CRUD with Context",
+    img: Crud,
+    url: "https://mini-desafio.vercel.app/",
+    code: "https://github.com/JonathanMRuiz/mini-desafio",
   },
 ];
 const Projects = () => {

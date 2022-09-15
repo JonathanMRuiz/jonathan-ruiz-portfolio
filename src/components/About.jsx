@@ -22,7 +22,7 @@ const About = () => {
               I consider myself a proactive, self-learner, team player person.
               I’m always willing to learn new technologies and best practices,
               and share them to the world. Looking forward to get my first
-              opportunity to take the next step in my career.
+              opportunity to take the next step in my career
               <BtnDownload />
             </p>
           </div>

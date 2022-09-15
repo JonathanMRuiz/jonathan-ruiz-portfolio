@@ -32,7 +32,6 @@ const navList = [
   { name: "Experience", path: "experience" },
   { name: "Skills", path: "skills" },
   { name: "Projects", path: "projects" },
-  { name: "Education", path: "education" },
   { name: "Contact", path: "contact" },
 ];
 
@@ -44,10 +43,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
-      <div>
-        <img src={Logo} alt="Logo" className="h-[80px] w-[120px]" />
-      </div>
+    <div className="fixed w-full h-[80px] flex justify-around items-center px-4 bg-[#0a192f] text-gray-300 ">
+      <img src={Logo} alt="Logo" className="h-[80px] w-[120px]" />
 
       <ul className="hidden md:flex">
         {navList.map((item, idx) => (
