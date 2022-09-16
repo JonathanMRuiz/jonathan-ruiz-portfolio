@@ -31,10 +31,10 @@ const Experience = () => {
           </div>
           <div></div>
         </div>
-        {experienceTask.map((item, idx) => (
+        {experienceTask.map((item, index) => (
           <div
             className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4"
-            key={idx}
+            key={index}
           >
             <div className="sm:text-right ">
               <p className="text-4xl font-bold">{item.title}</p>
@@ -45,10 +45,12 @@ const Experience = () => {
               <div className="mt-5">
                 <h3>Tasks in which he contributed:</h3>
                 <ul>
-                  {item.tasks.map((task) => (
-                    <li>
-                      <span className="p-0">- {task}</span>
-                    </li>
+                  {item.tasks.map((task, idx) => (
+                    <div key={idx}>
+                      <li>
+                        <span className="p-0">- {task}</span>
+                      </li>
+                    </div>
                   ))}
                 </ul>
               </div>
