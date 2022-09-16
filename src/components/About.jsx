@@ -1,5 +1,6 @@
 import React from "react";
 import BtnDownload from "./DownloadPdf/DownloadPdf";
+import { socialIcons } from "./Navbar";
 
 const About = () => {
   return (

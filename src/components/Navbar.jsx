@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 
 export const socialIcons = [
@@ -80,6 +79,19 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
+        <div className="flex justify-center lg:hidden h-6 mt-6">
+          {socialIcons.map((item, index) => (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noreferrer"
+              key={index}
+              className="ml-4"
+            >
+              <span>{item.icon}</span>
+            </a>
+          ))}
+        </div>
       </ul>
 
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
