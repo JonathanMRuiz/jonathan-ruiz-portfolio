@@ -5,7 +5,7 @@ import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 
-const socialIcons = [
+export const socialIcons = [
   {
     name: "Linkedin",
     icon: <FaLinkedin size={30} />,
@@ -17,12 +17,6 @@ const socialIcons = [
     icon: <FaGithub size={30} />,
     background: "bg-black",
     url: "https://github.com/JonathanMRuiz",
-  },
-  {
-    name: "Email",
-    icon: <HiOutlineMail size={30} />,
-    background: "bg-[#6fc2b0]",
-    url: "",
   },
 ];
 
@@ -45,7 +39,6 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-around items-center px-4 bg-[#0a192f] text-gray-300 ">
       <img src={Logo} alt="Logo" className="h-[80px] w-[120px]" />
-
       <ul className="hidden md:flex">
         {navList.map((item, idx) => (
           <li>
@@ -66,14 +59,14 @@ const Navbar = () => {
       <div onClick={handleClickNav} className="md:hidden z-10">
         {!toggleNav ? <FaBars /> : <FaTimes />}
       </div>
-      {navList.map((item) => (
-        <ul
-          className={
-            !toggleNav
-              ? "hidden"
-              : "absolute top-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
-          }
-        >
+      <ul
+        className={
+          !toggleNav
+            ? "hidden"
+            : "absolute top-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
+        }
+      >
+        {navList.map((item, idx) => (
           <li className="py-6 text-4xl">
             <Link
               activeClass="active"
@@ -86,8 +79,8 @@ const Navbar = () => {
               {item.name}
             </Link>
           </li>
-        </ul>
-      ))}
+        ))}
+      </ul>
 
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
         <ul>

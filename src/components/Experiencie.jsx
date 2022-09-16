@@ -7,10 +7,11 @@ const experienceTask = [
     description:
       "I currently work with a group of friends doing Front End development and I have access to their Jira to see and carry out the tasks assigned to them, Figma to see the design and adapt it and Gitlab to make the pull requests.",
     tasks: [
-      "Responsive design with Tailwind and Bootstrap.",
-      "Repeated code fix, to obtain a more scalable application in the future.",
+      "Responsive design with Tailwind.",
+      "Bug fixes of application.",
+      "Code refactoring to build a more scalable application in the future.",
       "Build a more confident test suite with CypressJS, React Testing Library, Jest and MSW.",
-      "Creation and correction of components in React.",
+      "Creation of reusable React components in a shared library to use across different applicationst",
     ],
   },
 ];
@@ -31,7 +32,10 @@ const Experience = () => {
           <div></div>
         </div>
         {experienceTask.map((item, idx) => (
-          <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4" key={idx}>
+          <div
+            className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4"
+            key={idx}
+          >
             <div className="sm:text-right ">
               <p className="text-4xl font-bold">{item.title}</p>
               <p className="text-sm">{item.subtitle}</p>
@@ -42,7 +46,9 @@ const Experience = () => {
                 <h3>Tasks in which he contributed:</h3>
                 <ul>
                   {item.tasks.map((task) => (
-                    <li>- {task}</li>
+                    <li>
+                      <span className="p-0">- {task}</span>
+                    </li>
                   ))}
                 </ul>
               </div>

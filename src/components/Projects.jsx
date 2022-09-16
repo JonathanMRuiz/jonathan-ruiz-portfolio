@@ -39,7 +39,7 @@ const projectsData = [
   },
 
   {
-    name: "CRUD with Context",
+    name: "CRUD with Context (Challenge for interview)",
     img: Crud,
     url: "https://mini-desafio.vercel.app/",
     code: "https://github.com/JonathanMRuiz/mini-desafio",
@@ -57,6 +57,15 @@ const Projects = () => {
             Projects
           </p>
           <p className="py-6">Check out some of my recent projects</p>
+          <p> I have more repositories in my Github.</p>
+          <a
+            href="https://github.com/JonathanMRuiz"
+            target="_blank"
+            rel="noreferrer"
+            className="text-pink-400"
+          >
+            Visit my Github
+          </a>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {projectsData.map((project, idx) => (

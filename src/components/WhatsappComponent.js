@@ -14,7 +14,6 @@ const WhatsappComponent = () => {
         allowClickAway={true}
         allowEsc={true}
         height={300}
-        className="hidden md:flex"
       />
     </div>
   );
