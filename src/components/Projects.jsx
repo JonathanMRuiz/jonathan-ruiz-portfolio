@@ -5,8 +5,16 @@ import Food from "../assets/food.png";
 import Login from "../assets/login.png";
 import RickAndMorty from "../assets/rickandmorty.png";
 import Crud from "../assets/crud.png";
+import Twitter from "../assets/twitter-clon.png";
 
 const projectsData = [
+  {
+    name: "Twitter Clon with Firebase",
+    img: Twitter,
+    url: "https://twitter-clon-react-362e.vercel.app/",
+    code: "https://github.com/JonathanMRuiz/twitter-clon-next",
+  },
+
   {
     name: "Challenge Movies DB",
     img: Movies,
@@ -47,10 +55,7 @@ const projectsData = [
 ];
 const Projects = () => {
   return (
-    <div
-      name="projects"
-      className="w-full h-full md:h-screen text-gray-300 bg-[#0a192f] "
-    >
+    <div name="projects" className="w-full h-full  text-gray-300 bg-[#0a192f] ">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 mt-10">
