@@ -3,7 +3,7 @@ import React from "react";
 const experienceTask = [
   {
     title: "Front-end Developer",
-    subtitle: "02/2022 - Present",
+    subtitle: "10/2021 - Present",
     description:
       "I currently work with a group of friends doing Front End development and I have access to their Jira to see and carry out the tasks assigned to them, Figma to see the design and adapt it and Gitlab to make the pull requests.",
     tasks: [
