@@ -9,6 +9,12 @@ import Twitter from "../assets/twitter-clon.png";
 
 const projectsData = [
   {
+    name: "Youtube Clon",
+    img: Twitter,
+    url: "https://youtube-clone-om49.vercel.app/",
+    code: "https://github.com/JonathanMRuiz/youtube-clone",
+  },
+  {
     name: "Twitter Clon with Firebase",
     img: Twitter,
     url: "https://twitter-clon-react-362e.vercel.app/",

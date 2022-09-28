@@ -19,7 +19,7 @@ const Home = () => {
             options={{
               strings: [
                 "Web Designer",
-                "React JS Developer",
+                "React Developer",
                 "Javascript Developer",
                 "Responsive Designer",
               ],
