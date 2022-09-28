@@ -6,11 +6,12 @@ import Login from "../assets/login.png";
 import RickAndMorty from "../assets/rickandmorty.png";
 import Crud from "../assets/crud.png";
 import Twitter from "../assets/twitter-clon.png";
+import Youtube from "../assets/youtube-clon.png";
 
 const projectsData = [
   {
     name: "Youtube Clon",
-    img: Twitter,
+    img: Youtube,
     url: "https://youtube-clone-om49.vercel.app/",
     code: "https://github.com/JonathanMRuiz/youtube-clone",
   },
