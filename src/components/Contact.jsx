@@ -60,10 +60,15 @@ const Contact = () => {
       >
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300">
-            Contact
+            Contactame
           </p>
           <p className="text-gray-300 py-4">
-            This form works, feel free to use it to contact me.
+            Este formulario funciona 🤣, si te gustaria que sea parte de tu
+            equipo no dudes en usarlo !
+          </p>
+
+          <p className="text-gray-300 py-4">
+            Tambien dejo mi correo: matiruiz96@outlook.com
           </p>
         </div>
         <input

@@ -2,16 +2,18 @@ import React from "react";
 
 const experienceTask = [
   {
-    title: "Front-end Developer",
+    title: "Neurocann",
     subtitle: "10/2021 - Present",
     description:
-      "I currently work with a group of friends doing Front End development and I have access to their Jira to see and carry out the tasks assigned to them, Figma to see the design and adapt it and Gitlab to make the pull requests.",
+      "Neurocann es una aplicación ERP de cannabis que gestiona los datos de producción y cumplimiento en un solo sistema para que sus clientes los vean en una vista general.",
     tasks: [
-      "Responsive design with Tailwind.",
-      "Bug fixes of application.",
-      "Code refactoring to build a more scalable application in the future.",
-      "Build a more confident test suite with CypressJS, React Testing Library, Jest and MSW.",
-      "Creation of reusable React components in a shared library to use across different applicationst",
+      "Diseño responsive con Tailwind.",
+      "Corrección de errores de la aplicación.",
+      "Refactorización de código para construir una aplicación más escalable a futuro.",
+      "Cree un conjunto de pruebas más seguro con CypressJS, React Testing Library, Jest y MSW.",
+      "Creación de componentes React reutilizables en una biblioteca compartida para usar en diferentes aplicaciones.",
+      "Manejo intensivo de formularios con React-hook-form.",
+      "Gestión y virtualización de mesas con React-table y React-virtual.",
     ],
   },
 ];
@@ -26,7 +28,7 @@ const Experience = () => {
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="sm:text-right pb-8 pl-4">
             <p className="text-4xl font-bold inline border-b-4 border-pink-600">
-              Experience
+              Experiencia
             </p>
           </div>
           <div></div>
@@ -43,7 +45,6 @@ const Experience = () => {
             <div>
               <p>{item.description}</p>
               <div className="mt-5">
-                <h3>Tasks in which he contributed:</h3>
                 <ul>
                   {item.tasks.map((task, idx) => (
                     <div key={idx}>

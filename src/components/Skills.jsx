@@ -60,7 +60,9 @@ const Skills = () => {
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 ">
             Skills
           </p>
-          <p className="py-4">These are the technologies I've worked with</p>
+          <p className="py-4">
+            Estas son las tecnologías con las que he trabajado
+          </p>
         </div>
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
           {skills.map((skill, index) => (
@@ -78,7 +80,8 @@ const Skills = () => {
             Tools
           </p>
           <p className="py-4">
-            These are the tools we use for task control and team communication
+            Estas son las herramientas que utilizamos para el control de tareas
+            y la comunicación del equipo{" "}
           </p>
         </div>
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">

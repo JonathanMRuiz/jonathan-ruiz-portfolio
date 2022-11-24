@@ -20,12 +20,12 @@ export const socialIcons = [
 ];
 
 const navList = [
-  { name: "Home", path: "home" },
-  { name: "About", path: "about" },
-  { name: "Experience", path: "experience" },
+  { name: "Inicio", path: "home" },
+  { name: "Sobre mi", path: "about" },
+  { name: "Experiencia", path: "experience" },
   { name: "Skills", path: "skills" },
-  { name: "Projects", path: "projects" },
-  { name: "Contact", path: "contact" },
+  { name: "Mis Proyectos", path: "projects" },
+  { name: "Contactame", path: "contact" },
 ];
 
 const Navbar = () => {
