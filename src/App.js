@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { Helmet } from "react-helmet";
 
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -22,6 +23,16 @@ const Welcolme = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Desarrollador FullStack - Jonathan Ruiz</title>
+        <meta name="title" content="Desarrollador FullStack - Jonathan Ruiz" />
+        <meta
+          name="description"
+          content="Todo lo que necesitas para el desarrollo de tu aplicación web.  
+Desarrollador Fullstack listo para ayudar a crear aplicaciones funcionales, componentes reutilizables. 
+"
+        />
+      </Helmet>
       <Navbar changeEnglish={changeToEnglish} changeSpanish={changeToSpanish} />
       <Home />
       <About />
