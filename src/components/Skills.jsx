@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import {
   SiReact,
@@ -49,6 +50,8 @@ const tools = [
 ];
 
 const Skills = () => {
+  const { t } = useTranslation(["language"]);
+
   return (
     <div
       name="skills"
@@ -60,9 +63,7 @@ const Skills = () => {
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 ">
             Skills
           </p>
-          <p className="py-4">
-            Estas son las tecnologías con las que he trabajado
-          </p>
+          <p className="py-4">{t("text_skills")}</p>
         </div>
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
           {skills.map((skill, index) => (
@@ -79,10 +80,7 @@ const Skills = () => {
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 ">
             Tools
           </p>
-          <p className="py-4">
-            Estas son las herramientas que utilizamos para el control de tareas
-            y la comunicación del equipo{" "}
-          </p>
+          <p className="py-4">{t("tools_skills")}</p>
         </div>
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
           {tools.map((skill, index) => (

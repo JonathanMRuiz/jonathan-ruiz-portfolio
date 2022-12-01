@@ -1,10 +1,17 @@
 {
-  "hello_myNameIs": "Hola, Soy",
+  "hello_myNameIs": "Hola, me llamo",
   "developer_fullstack": "Desarrollador FullStack",
   "description_home": "Desarrollador Fullstack con dos años de experiencia desarrollando aplicaciones por mi cuenta y 1 año trabajando como desarrollador Freelance para una Startup de Colorado. Estoy listo para ayudar con mis conocimientos a crear aplicaciones funcionales, reutilizables y escalables a futuro.",
-  "project_btn": "Mis Proyectos",
+  "project_text": "Mis Proyectos",
   "about_title": "Sobre mi",
   "subtitle_about": "Te cuento un poco de mi",
   "description_about": "Siempre estoy dispuesto a aprender nuevas tecnologías , mejores prácticas y trabajar en equipo. Cuento con mas de 1 año y medio de experiencia como Freelance para una startup de Colorado. No soy un empleado oficial por lo cual no puedo asistir a las reuniones del equipo y negocio (razón por la cual quiero cambiar, para poder crecer profesionalmente con un equipo y no solo en lo técnico).",
-  "btn_about": "Descargar Curriculum"
+  "btn_about": "Descargar Curriculum",
+  "text_skills": "He trabajado con estas tecnologias",
+  "tools_skills": "Estas son las herramientas que use para el control de tareas y la comunicación del equipo",
+  "text_projects": "Estos son algunos de mis proyectos recientes",
+  "github_project": "Tengo más repositorios en mi Github.",
+  "contact_title": "Contactame",
+  "contact_description": "Este formulario funciona 🤣, si te gustaria que sea parte de tu equipo no dudes en usarlo !",
+  "contact_email": "También puedes enviarme un correo a:"
 }

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 const experienceTask = [
   {
     title: "Neurocann",
@@ -19,6 +19,8 @@ const experienceTask = [
 ];
 
 const Experience = () => {
+  const { t } = useTranslation(["language"]);
+
   return (
     <div
       name="experience"
@@ -28,10 +30,9 @@ const Experience = () => {
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="sm:text-right pb-8 pl-4">
             <p className="text-4xl font-bold inline border-b-4 border-pink-600">
-              Experiencia
+              {t("title_experience")}
             </p>
           </div>
-          <div></div>
         </div>
         {experienceTask.map((item, index) => (
           <div

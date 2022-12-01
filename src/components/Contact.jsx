@@ -2,9 +2,11 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import { AiOutlineCheck } from "react-icons/ai";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const form = useRef();
+  const { t } = useTranslation(["language"]);
   const [loading, setLoading] = useState();
   const [message, setMessage] = useState("");
   const [error, setError] = useState(null);
@@ -60,15 +62,12 @@ const Contact = () => {
       >
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300">
-            Contactame
+            {t("contact_title")}
           </p>
-          <p className="text-gray-300 py-4">
-            Este formulario funciona 🤣, si te gustaria que sea parte de tu
-            equipo no dudes en usarlo !
-          </p>
+          <p className="text-gray-300 py-4">{t("contact_description")}</p>
 
           <p className="text-gray-300 py-4">
-            Tambien dejo mi correo: matiruiz96@outlook.com
+            {t("contact_email")} jonathanmruiz@yahoo.com
           </p>
         </div>
         <input

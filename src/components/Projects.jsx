@@ -7,6 +7,8 @@ import RickAndMorty from "../assets/rickandmorty.png";
 import Crud from "../assets/crud.png";
 import Twitter from "../assets/twitter-clon.png";
 import Youtube from "../assets/youtube-clon.png";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const projectsData = [
   {
@@ -61,15 +63,16 @@ const projectsData = [
   },
 ];
 const Projects = () => {
+  const { t } = useTranslation(["language"]);
   return (
     <div name="projects" className="w-full h-full  text-gray-300 bg-[#0a192f] ">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 mt-10">
-            Mis proyectos
+            {t("project_text")}
           </p>
-          <p className="py-6">Estos son algunos de mis proyectos recientes</p>
-          <p> Tengo más repositorios en mi Github.</p>
+          <p className="py-6">{t("text_projects")}</p>
+          <p> {t("github_project")}</p>
           <a
             href="https://github.com/JonathanMRuiz"
             target="_blank"

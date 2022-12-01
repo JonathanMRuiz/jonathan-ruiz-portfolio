@@ -48,7 +48,7 @@ const Home = () => {
               offset={50}
               duration={500}
             >
-              {t("project_btn")}
+              {t("project_text")}
             </Link>
             <span className="group-hover:rotate-90 duration-300">
               <HiArrowNarrowRight className="ml-3" />
