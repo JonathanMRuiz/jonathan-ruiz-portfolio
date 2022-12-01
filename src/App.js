@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experiencie";
@@ -6,10 +8,21 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import WhatsappComponent from "./components/WhatsappComponent";
 import Projects from "./components/Projects";
-function App() {
+
+import { useTranslation } from "react-i18next";
+
+const Welcolme = () => {
+  const { i18n } = useTranslation(["language"]);
+
+  const changeToEnglish = () => {
+    i18n.changeLanguage("en");
+  };
+  const changeToSpanish = () => {
+    i18n.changeLanguage("es");
+  };
   return (
     <>
-      <Navbar />
+      <Navbar changeEnglish={changeToEnglish} changeSpanish={changeToSpanish} />
       <Home />
       <About />
       <Experience />
@@ -18,6 +31,14 @@ function App() {
       <Contact />
       <WhatsappComponent />
     </>
+  );
+};
+
+function App() {
+  return (
+    <Suspense fallback="cargando traducciones">
+      <Welcolme />
+    </Suspense>
   );
 }
 

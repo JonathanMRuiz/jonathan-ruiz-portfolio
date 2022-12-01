@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 export const socialIcons = [
   {
@@ -19,26 +20,34 @@ export const socialIcons = [
   },
 ];
 
-const navList = [
-  { name: "Inicio", path: "home" },
-  { name: "Sobre mi", path: "about" },
-  { name: "Experiencia", path: "experience" },
-  { name: "Skills", path: "skills" },
-  { name: "Mis Proyectos", path: "projects" },
-  { name: "Contactame", path: "contact" },
-];
-
-const Navbar = () => {
+const Navbar = ({ changeSpanish, changeEnglish }) => {
   const [toggleNav, setToggleNav] = useState(false);
+  const { t } = useTranslation(["language"]);
+
+  const navList = [
+    { name: "Inicio", path: "home" },
+    { name: "Sobre mi", path: "about" },
+    { name: "Experiencia", path: "experience" },
+    { name: "Skills", path: "skills" },
+    { name: "Mis Proyectos", path: "projects" },
+    { name: "Contactame", path: "contact" },
+  ];
 
   const handleClickNav = () => {
     setToggleNav(!toggleNav);
   };
 
+  console.log(t);
   return (
     <div className="fixed w-full h-[80px] flex justify-around items-center px-4 bg-[#0a192f] text-gray-300 ">
       <div>
         <img src={Logo} alt="Logo" className="h-[80px] w-[120px]" />
+      </div>
+      <div>
+        <button onClick={changeSpanish} className="mr-4">
+          ES
+        </button>
+        <button onClick={changeEnglish}>EN</button>
       </div>
 
       <div className="flex">
