@@ -36,7 +36,7 @@ const Welcolme = () => {
 
 function App() {
   return (
-    <Suspense fallback="cargando traducciones">
+    <Suspense fallback="Cargando traducciones">
       <Welcolme />
     </Suspense>
   );
