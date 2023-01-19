@@ -7,10 +7,19 @@ import RickAndMorty from "../assets/rickandmorty.png";
 import Crud from "../assets/crud.png";
 import Twitter from "../assets/twitter-clon.png";
 import Youtube from "../assets/youtube-clon.png";
+import Lyriks from "../assets/Lyriks.png";
+import ChallengeForm from "../assets/challengeform.png";
+
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 const projectsData = [
+  {
+    name: "Lyriks",
+    img: Lyriks,
+    url: "https://spotify-clone-beta-amber.vercel.app/",
+    code: "https://github.com/JonathanMRuiz/spotify-clone",
+  },
   {
     name: "Youtube Clon",
     img: Youtube,
@@ -29,6 +38,12 @@ const projectsData = [
     img: Movies,
     url: "https://challenge-moviesdb.vercel.app/",
     code: "https://github.com/JonathanMRuiz/challenge-moviesdb",
+  },
+  {
+    name: "Challenge Form",
+    img: ChallengeForm,
+    url: "https://challenge-greydive-kappa-ecru.vercel.app/",
+    code: "https://github.com/JonathanMRuiz/challenge-greydive",
   },
   {
     name: "Rick and Morty API",

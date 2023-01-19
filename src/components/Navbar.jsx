@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export const socialIcons = [
@@ -25,12 +25,12 @@ const Navbar = ({ changeSpanish, changeEnglish }) => {
   const { t } = useTranslation(["language"]);
 
   const navList = [
-    { name: "Inicio", path: "home" },
-    { name: "Sobre mi", path: "about" },
-    { name: "Experiencia", path: "experience" },
-    { name: "Skills", path: "skills" },
-    { name: "Mis Proyectos", path: "projects" },
-    { name: "Contactame", path: "contact" },
+    { name: "Inicio", path: "/" },
+    { name: "Sobre mi", path: "/about" },
+    { name: "Experiencia", path: "/experience" },
+    { name: "Skills", path: "/skills" },
+    { name: "Mis Proyectos", path: "/projects" },
+    { name: "Contactame", path: "/contact" },
   ];
 
   const handleClickNav = () => {
@@ -39,9 +39,9 @@ const Navbar = ({ changeSpanish, changeEnglish }) => {
 
   console.log(t);
   return (
-    <div className="fixed w-full h-[80px] flex justify-around items-center px-4 bg-[#0a192f] text-gray-300 ">
+    <div className="w-full h-[80px] flex justify-around items-center px-4 bg-[#0a192f] text-gray-300 ">
       <div>
-        <img src={Logo} alt="Logo" className="h-[80px] w-[120px]" />
+        <img src={Logo} alt="Logo" className="h-[70px] w-[120px]" />
       </div>
       <div>
         <button onClick={changeSpanish} className="mr-4">
@@ -54,16 +54,7 @@ const Navbar = ({ changeSpanish, changeEnglish }) => {
         {navList.map((item, index) => (
           <ul className="hidden md:flex" key={index}>
             <li>
-              <Link
-                activeClass="active"
-                to={item.path}
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-              >
-                {item.name}
-              </Link>
+              <Link to={item.path}>{item.name}</Link>
             </li>
           </ul>
         ))}
@@ -81,16 +72,7 @@ const Navbar = ({ changeSpanish, changeEnglish }) => {
         {navList.map((item, index) => (
           <div key={index}>
             <li className="py-6 text-4xl" key={index}>
-              <Link
-                activeClass="active"
-                to={item.path}
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-              >
-                {item.name}
-              </Link>
+              <Link to={item.path}>{item.name}</Link>
             </li>
           </div>
         ))}

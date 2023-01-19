@@ -12,6 +12,8 @@ import Projects from "./components/Projects";
 import { useTranslation } from "react-i18next";
 import Metadata from "./components/Metadata";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 const Welcolme = () => {
   const { i18n } = useTranslation(["language"]);
 
@@ -22,17 +24,20 @@ const Welcolme = () => {
     i18n.changeLanguage("es");
   };
   return (
-    <>
+    <BrowserRouter>
       <Metadata />
       <Navbar changeEnglish={changeToEnglish} changeSpanish={changeToSpanish} />
-      <Home />
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
       <WhatsappComponent />
-    </>
+    </BrowserRouter>
   );
 };
 

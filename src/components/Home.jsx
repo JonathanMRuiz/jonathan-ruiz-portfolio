@@ -20,15 +20,18 @@ const Home = () => {
           <Typewriter
             options={{
               strings: [
-                "React.js",
+                "React.Js",
+                "Next.Js",
                 "HTML5 y CSS3",
                 "Javascript",
-                "API Services",
-                "Node.js",
+                "API REST",
+                "Node.Js",
                 "MongoDb",
                 "Express",
+                "Firebase",
                 "Redux",
                 "Material UI",
+                "Responsive Designer",
               ],
               autoStart: true,
               loop: true,
