@@ -25,12 +25,12 @@ const Navbar = ({ changeSpanish, changeEnglish }) => {
   const { t } = useTranslation(["language"]);
 
   const navList = [
-    { name: "Inicio", path: "/" },
-    { name: "Sobre mi", path: "/about" },
-    { name: "Experiencia", path: "/experience" },
-    { name: "Skills", path: "/skills" },
-    { name: "Mis Proyectos", path: "/projects" },
-    { name: "Contactame", path: "/contact" },
+    { name: t("nav_home"), path: "/" },
+    { name: t("nav_about"), path: "/about" },
+    { name: t("nav_exp"), path: "/experience" },
+    { name: t("nav_skill"), path: "/skills" },
+    { name: t("nav_project"), path: "/projects" },
+    { name: t("nav_contact"), path: "/contact" },
   ];
 
   const handleClickNav = () => {

@@ -14,5 +14,19 @@
   "github_project": "I have more repositories on my Github.",
   "contact_title": "Contact me",
   "contact_description": "This form works 🤣, if you would like me to be part of your team, do not hesitate to use it!",
-  "contact_email": "You can also send me an email at:"
+  "contact_email": "You can also send me an email at:",
+  "nav_home": "Home",
+  "nav_about": "About me",
+  "nav_exp": "Experience",
+  "nav_skill": "Skills",
+  "nav_project": "My Projects",
+  "nav_contact": "Contact me",
+  "description_exp": "Neurocann is a cannabis ERP app that manages production and fulfillment data in one system for your customers to see in a general view.",
+  "task_one": "Responsive design with Tailwind.",
+  "task_two": "Bug fixes of application.",
+  "task_three": "Code refactoring to build a more scalable application in the future.",
+  "task_four": "Build a more confident test suite with CypressJS, React Testing Library, Jest and MSW.",
+  "task_five": "Creation of reusable React components in a shared library to use across different applicationst.",
+  "task_six": "Intensive handling of forms with react-hook-form and Formik",
+  "task_seven": "Management and virtualization of tables with react-table and react-virtual."
 }

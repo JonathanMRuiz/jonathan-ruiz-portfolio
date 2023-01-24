@@ -1,25 +1,25 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-const experienceTask = [
-  {
-    title: "Neurocann",
-    subtitle: "10/2021 - Present",
-    description:
-      "Neurocann es una aplicación ERP de cannabis que gestiona los datos de producción y cumplimiento en un solo sistema para que sus clientes los vean en una vista general.",
-    tasks: [
-      "Diseño responsive con Tailwind.",
-      "Corrección de errores de la aplicación.",
-      "Refactorización de código para construir una aplicación más escalable a futuro.",
-      "Cree un conjunto de pruebas más seguro con CypressJS, React Testing Library, Jest y MSW.",
-      "Creación de componentes React reutilizables en una biblioteca compartida para usar en diferentes aplicaciones.",
-      "Manejo intensivo de formularios con React-hook-form.",
-      "Gestión y virtualización de mesas con React-table y React-virtual.",
-    ],
-  },
-];
 
 const Experience = () => {
   const { t } = useTranslation(["language"]);
+
+  const experienceTask = [
+    {
+      title: "Neurocann",
+      subtitle: "10/2021 - Present",
+      description: t("description_exp"),
+      tasks: [
+        t("task_one"),
+        t("task_two"),
+        t("task_three"),
+        t("task_four"),
+        t("task_five"),
+        t("task_six"),
+        t("task_seven"),
+      ],
+    },
+  ];
 
   return (
     <div
