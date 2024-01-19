@@ -21,12 +21,24 @@
   "nav_skill": "Habilidades",
   "nav_project": "Mis proyectos",
   "nav_contact": "Contactame",
-  "description_exp": "Neurocann es una aplicación ERP de cannabis que gestiona los datos de producción y cumplimiento en un solo sistema para que sus clientes los vean en una vista general.",
-  "task_one": "Diseño responsive con Tailwind.",
-  "task_two": "Corrección de errores de la aplicación.",
-  "task_three": "Refactorización de código para construir una aplicación más escalable a futuro.",
-  "task_four": "Cree un conjunto de pruebas más seguro con CypressJS, React Testing Library, Jest y MSW.",
-  "task_five": "Creación de componentes React reutilizables en una biblioteca compartida para usar en diferentes aplicaciones.",
-  "task_six": "Manejo intensivo de formularios con React-hook-form.",
-  "task_seven": "Gestión y virtualización de mesas con React-table y React-virtual."
+  "description_exp_neurocann": "Neurocann es una aplicación ERP de cannabis que gestiona los datos de producción y cumplimiento en un solo sistema para que sus clientes los vean en una vista general.",
+  "task_one_neurocann": "Diseño responsive con Tailwind.",
+  "task_two_neurocann": "Corrección de errores de la aplicación.",
+  "task_three_neurocann": "Refactorización de código para construir una aplicación más escalable a futuro.",
+  "task_four_neurocann": "Cree un conjunto de pruebas más seguro con CypressJS, React Testing Library, Jest y MSW.",
+  "task_five_neurocann": "Creación de componentes React reutilizables en una biblioteca compartida para usar en diferentes aplicaciones.",
+  "task_six_neurocann": "Manejo intensivo de formularios con React-hook-form.",
+  "task_seven_neurocann": "Gestión y virtualización de mesas con React-table y React-virtual.",
+
+  "description_exp_nerd": "Nerd desarrolla estrategias de marketing digital y soluciones de creatividad tecnológica para grandes empresas.",
+  "task_one_nerd": "Diseño web responsive con Kendo UI, Sass, HTML y CSS.",
+  "task_two_nerd": "Banner animados realizados con Google Web Designer, HTML, CSS y Javascript para FCB que es una empresa de marketing digital de Chicago.",
+  "task_three_nerd": "Maquetado de correos electrónicos para que sean responsives en distintas casillas de correos con HTML",
+  "task_four_nerd": "Creación de componentes con Kendo UI para el sitio de Nerdapps que habitualmente se usa por el equipo de Nerd",
+  "task_five_nerd": "Realizo mantenimiento, cambios visuales, lógicos y de base de datos (HTML, CSS, Javascript, PHP, MySQL, JQuery, Bootstrap) para el sitio web del supermercado La Anónima. Para esto hay un proceso de hacer cambios en un ambiente de desarrollo y cuando es revisado por los Projects Managers y esta todo ok, los subo a la ambiente de producción.",
+
+  "description_exp_gunny": "Gunny es un juego shooter en tercera persona F2P libre de especulaciones financieras que realiza transacciones en la red de Algorand.",
+  "task_one_gunny": "Diseño y maquetación con React JS, Chakra UI y Sass, de un sitio web para un proyecto blockchain con red de Algorand.",
+  "task_two_gunny": "Uso y creación de imágenes realizadas con la ayuda de IA Midjourney.",
+  "task_three_gunny": "Conexión de contratos de red blockchain al frontend con React JS."
 }

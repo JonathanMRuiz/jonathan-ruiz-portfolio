@@ -1,39 +1,81 @@
-import { Suspense } from "react";
-
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Experience from "./components/Experiencie";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
-import WhatsappComponent from "./components/WhatsappComponent";
-import Projects from "./components/Projects";
-
+import React, { lazy, Suspense, useState, useEffect } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Metadata from "./components/Metadata";
+import Navbar from "./components/Navbar";
+import WhatsappComponent from "./components/WhatsappComponent";
+import Loading from "./components/Loading";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+const Home = lazy(() => import("./components/Home"));
+const About = lazy(() => import("./components/About"));
+const Experience = lazy(() => import("./components/Experience"));
+const Skills = lazy(() => import("./components/Skills"));
+const Projects = lazy(() => import("./components/Projects"));
+const Contact = lazy(() => import("./components/Contact"));
 
-const Welcolme = () => {
+const LazyLoadedComponent = ({ component: Component, ...rest }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div>
+      {loading ? (
+        <div className="bg-primary h-screen flex justify-center items-center">
+          <Loading />
+        </div>
+      ) : (
+        <Suspense fallback="Cargando traducciones">
+          <Component {...rest} />
+        </Suspense>
+      )}
+    </div>
+  );
+};
+
+const Welcome = () => {
   const { i18n } = useTranslation(["language"]);
 
   const changeToEnglish = () => {
     i18n.changeLanguage("en");
   };
+
   const changeToSpanish = () => {
     i18n.changeLanguage("es");
   };
+
   return (
     <BrowserRouter>
       <Metadata />
       <Navbar changeEnglish={changeToEnglish} changeSpanish={changeToSpanish} />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<LazyLoadedComponent component={Home} />} />
+        <Route
+          path="/about"
+          element={<LazyLoadedComponent component={About} />}
+        />
+        <Route
+          path="/experience"
+          element={<LazyLoadedComponent component={Experience} />}
+        />
+        <Route
+          path="/skills"
+          element={<LazyLoadedComponent component={Skills} />}
+        />
+        <Route
+          path="/projects"
+          element={<LazyLoadedComponent component={Projects} />}
+        />
+        <Route
+          path="/contact"
+          element={<LazyLoadedComponent component={Contact} />}
+        />
       </Routes>
 
       <WhatsappComponent />
@@ -44,7 +86,7 @@ const Welcolme = () => {
 function App() {
   return (
     <Suspense fallback="Cargando traducciones">
-      <Welcolme />
+      <Welcome />
     </Suspense>
   );
 }

@@ -1,52 +1,85 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import validator from "validator";
-
+import { useForm } from "react-hook-form";
 import { AiOutlineCheck } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 
 const Contact = () => {
-  const form = useRef();
   const { t } = useTranslation(["language"]);
-  const [loading, setLoading] = useState();
-
-  const [error, setError] = useState(null);
-
+  const [loading, setLoading] = useState(false);
   const [emailError, setEmailError] = useState("");
+  const form = useRef();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
-  const validateEmail = (e) => {
-    var email = e.target.value;
-
-    if (validator.isEmail(email)) {
-      setEmailError("Valid Email :)");
-    } else {
+  const validateEmail = async (email) => {
+    if (!validator.isEmail(email)) {
       setEmailError("Enter valid Email!");
+      return false;
+    }
+
+    try {
+      const apiKey = "Z2IySjNZxBFeMDtXSxF7wmxZ8jw927mj"; // Reemplaza con tu clave de API
+      const url = `https://api.apilayer.com/email_verification/check?email=${email}`;
+
+      const response = await fetch(url, {
+        headers: {
+          apikey: apiKey,
+          "Content-Type": "application/json", // Ajusta según las necesidades de la API
+        },
+      });
+
+      const data = await response.json();
+
+      console.log(data);
+
+      if (!data.format_valid || !data.mx_found) {
+        setEmailError("Enter valid Email!");
+        return false;
+      } else {
+        setEmailError("Valid Email :)");
+        return true;
+      }
+    } catch (error) {
+      console.error("Error checking email:", error);
+      return false;
     }
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
+    const isValidEmail = await validateEmail(data.from_name);
 
-    emailjs
-      .sendForm(
-        "service_784xz48",
-        "template_rrh2ltl",
-        form.current,
-        "IafviD74InSwfbc5a"
-      )
-      .then(
-        (result) => {
-          setLoading(true);
-          console.log(result.text);
-          setTimeout(() => {
+    console.log(isValidEmail);
+
+    if (isValidEmail) {
+      setLoading(true);
+
+      emailjs
+        .sendForm(
+          "service_784xz48",
+          "template_rrh2ltl",
+          form.current,
+          "IafviD74InSwfbc5a"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setTimeout(() => {
+              setLoading(false);
+              reset(); // Reinicia el formulario después del envío exitoso
+            }, 2000);
+          },
+          (error) => {
+            console.log(error.text);
             setLoading(false);
-          }, 2000);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
+          }
+        );
+    }
   };
 
   return (
@@ -56,7 +89,7 @@ const Contact = () => {
     >
       <form
         ref={form}
-        onSubmit={sendEmail}
+        onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col items center max-w-[600px] w-full"
       >
         <div className="pb-8">
@@ -73,8 +106,7 @@ const Contact = () => {
           className="bg-[#ccd6f6] p-2"
           type="text"
           placeholder="Name"
-          name="to_name"
-          required
+          {...register("to_name", { required: "This field is required" })}
           autoComplete="off"
         />
 
@@ -82,20 +114,20 @@ const Contact = () => {
           className="my-4 p-2 bg-[#ccd6f6]"
           type="email"
           placeholder="Email"
-          name="from_name"
-          onChange={(e) => validateEmail(e)}
-          id="userEmail"
-          required
+          {...register("from_name", {
+            required: "This field is required",
+          })}
+          onChange={(e) => validateEmail(e.target.value)}
           autoComplete="off"
-        ></input>
-        <span>
-          {emailError && <h2 style={{ color: "red" }}>{emailError}</h2>}
-        </span>
+        />
+        <span>{errors.from_name && <p>{errors.from_name.message}</p>}</span>
+
         <textarea
           className="bg-[#ccd6f6] p-2"
           name="message"
           rows="10"
           placeholder="Message"
+          {...register("message", { required: "This field is required" })}
         ></textarea>
         {loading && (
           <div className="flex text-green-500 justify-center items-center">
