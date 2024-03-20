@@ -1,11 +1,11 @@
 {
   "hello_myNameIs": "Hola, me llamo",
   "developer_fullstack": "Desarrollador Frontend",
-  "description_home": "Desarrollador Frontend con dos años de experiencia desarrollando aplicaciones por mi cuenta y 1 año trabajando como desarrollador Freelance para una Startup de Colorado. Estoy listo para ayudar con mis conocimientos a crear aplicaciones funcionales, componentes reutilizables y escalables a futuro.",
+  "description_home": "Soy un desarrollador frontend con 3 años de experiencia en la creación de interfaces de usuario interactivas. Apasionado por el desarrollo web y las últimas tecnologías en el ámbito frontend. Habilidad para trabajar en equipo y entregar los proyectos dentro de plazos ajustados.",
   "project_text": "Mis Proyectos",
   "about_title": "Sobre mi",
   "subtitle_about": "Te cuento un poco de mi",
-  "description_about": "Siempre estoy dispuesto a aprender nuevas tecnologías , mejores prácticas y trabajar en equipo. Cuento con mas de 1 año y medio de experiencia como Freelance para una startup de Colorado. No soy un empleado oficial por lo cual no puedo asistir a las reuniones del equipo y negocio (razón por la cual quiero cambiar, para poder crecer profesionalmente con un equipo y no solo en lo técnico).",
+  "description_about": "Estoy inmerso en el mundo de la programación durante los últimos tres años, de los cuales tengo la suerte de trabajar los últimos dos años. Actualmente, estoy como empleado en relación de dependencia en Nerd, una empresa de medios con clientes destacados como La Anónima, FCB y Pfizer, y muchos otros clientes conocidos.",
   "btn_about": "Descargar Curriculum",
   "text_skills": "He trabajado con estas tecnologias",
   "tools_skills": "Estas son las herramientas que use para el control de tareas y la comunicación del equipo",
@@ -29,14 +29,12 @@
   "task_five_neurocann": "Creación de componentes React reutilizables en una biblioteca compartida para usar en diferentes aplicaciones.",
   "task_six_neurocann": "Manejo intensivo de formularios con React-hook-form.",
   "task_seven_neurocann": "Gestión y virtualización de mesas con React-table y React-virtual.",
-
   "description_exp_nerd": "Nerd desarrolla estrategias de marketing digital y soluciones de creatividad tecnológica para grandes empresas.",
   "task_one_nerd": "Diseño web responsive con Kendo UI, Sass, HTML y CSS.",
   "task_two_nerd": "Banner animados realizados con Google Web Designer, HTML, CSS y Javascript para FCB que es una empresa de marketing digital de Chicago.",
   "task_three_nerd": "Maquetado de correos electrónicos para que sean responsives en distintas casillas de correos con HTML",
   "task_four_nerd": "Creación de componentes con Kendo UI para el sitio de Nerdapps que habitualmente se usa por el equipo de Nerd",
   "task_five_nerd": "Realizo mantenimiento, cambios visuales, lógicos y de base de datos (HTML, CSS, Javascript, PHP, MySQL, JQuery, Bootstrap) para el sitio web del supermercado La Anónima. Para esto hay un proceso de hacer cambios en un ambiente de desarrollo y cuando es revisado por los Projects Managers y esta todo ok, los subo a la ambiente de producción.",
-
   "description_exp_gunny": "Gunny es un juego shooter en tercera persona F2P libre de especulaciones financieras que realiza transacciones en la red de Algorand.",
   "task_one_gunny": "Diseño y maquetación con React JS, Chakra UI y Sass, de un sitio web para un proyecto blockchain con red de Algorand.",
   "task_two_gunny": "Uso y creación de imágenes realizadas con la ayuda de IA Midjourney.",

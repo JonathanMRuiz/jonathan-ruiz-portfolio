@@ -17,7 +17,7 @@ const BtnDownload = ({ text }) => {
     <div>
       <button
         onClick={() => {
-          handleDownload(cv, "FrontendJonathanRuiz.pdf");
+          handleDownload(cv, "Jonathan Ruiz-Desarrollador Frontend.pdf");
         }}
         className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center"
       >

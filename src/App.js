@@ -7,7 +7,7 @@ import WhatsappComponent from "./components/WhatsappComponent";
 import Loading from "./components/Loading";
 
 const Home = lazy(() => import("./components/Home"));
-const About = lazy(() => import("./components/About"));
+// const About = lazy(() => import("./components/About"));
 const Experience = lazy(() => import("./components/Experience"));
 const Skills = lazy(() => import("./components/Skills"));
 const Projects = lazy(() => import("./components/Projects"));
@@ -27,7 +27,7 @@ const LazyLoadedComponent = ({ component: Component, ...rest }) => {
   return (
     <div>
       {loading ? (
-        <div className="bg-primary h-screen flex justify-center items-center">
+        <div className="bg-primary h-screen flex justify-center items-center bg-[#0a192f]">
           <Loading />
         </div>
       ) : (
@@ -56,10 +56,10 @@ const Welcome = () => {
       <Navbar changeEnglish={changeToEnglish} changeSpanish={changeToSpanish} />
       <Routes>
         <Route path="/" element={<LazyLoadedComponent component={Home} />} />
-        <Route
+        {/* <Route
           path="/about"
           element={<LazyLoadedComponent component={About} />}
-        />
+        /> */}
         <Route
           path="/experience"
           element={<LazyLoadedComponent component={Experience} />}

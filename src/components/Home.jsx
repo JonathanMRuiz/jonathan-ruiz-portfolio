@@ -45,9 +45,7 @@ const Home = () => {
           <Link to="/projects">
             <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-700 hover:border-pink-700">
               {t("project_text")}
-              <span className="group-hover:rotate-90 duration-300">
-                <HiArrowNarrowRight className="ml-3" />
-              </span>
+          
             </button>
           </Link>
         </div>
