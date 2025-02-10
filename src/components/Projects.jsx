@@ -1,139 +1,75 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
-import Movies from "../assets/movies.png";
-import Cards from "../assets/cards.png";
-import Food from "../assets/food.png";
-import Login from "../assets/login.png";
-import RickAndMorty from "../assets/rickandmorty.png";
-import Crud from "../assets/crud.png";
-import Twitter from "../assets/twitter-clon.png";
-import Youtube from "../assets/youtube-clon.png";
-import Lyriks from "../assets/Lyriks.png";
-import ChallengeForm from "../assets/challengeform.png";
-import Fade from "react-awesome-reveal";
+import { MdCode, MdPlayArrow } from "react-icons/md"; // Iconos para los proyectos
 
-// https://www.gunnygames.com/
-
-const projectsData = [
-  {
-    name: "Gunny Games",
-    img: "https://gunnyvideos.s3.amazonaws.com/background_01.jpg",
-    url: "https://www.gunnygames.com/",
-    code: "https://github.com/JonathanMRuiz/",
-  },
-  {
-    name: "Lyriks",
-    img: Lyriks,
-    url: "https://spotify-clone-beta-amber.vercel.app/",
-    code: "https://github.com/JonathanMRuiz/spotify-clone",
-  },
-  {
-    name: "Youtube Clon",
-    img: Youtube,
-    url: "https://youtube-clone-om49.vercel.app/",
-    code: "https://github.com/JonathanMRuiz/youtube-clone",
-  },
-  {
-    name: "Twitter Clon with Firebase",
-    img: Twitter,
-    url: "https://twitter-clon-react-362e.vercel.app/",
-    code: "https://github.com/JonathanMRuiz/twitter-clon-next",
-  },
-
-  {
-    name: "Challenge Movies DB",
-    img: Movies,
-    url: "https://challenge-moviesdb.vercel.app/",
-    code: "https://github.com/JonathanMRuiz/challenge-moviesdb",
-  },
-  {
-    name: "Challenge Form",
-    img: ChallengeForm,
-    url: "https://challenge-greydive-kappa-ecru.vercel.app/",
-    code: "https://github.com/JonathanMRuiz/challenge-greydive",
-  },
-  {
-    name: "Rick and Morty API",
-    img: RickAndMorty,
-    url: "https://rick-and-morty-app-red.vercel.app/",
-    code: "https://github.com/JonathanMRuiz/rick-and-morty-app",
-  },
-  {
-    name: "Food Store Template",
-    img: Food,
-    url: "https://food-store-five.vercel.app/",
-    code: "https://github.com/JonathanMRuiz/food-store",
-  },
-  {
-    name: "Login Template with Tailwind CSS",
-    img: Login,
-    url: "https://login-template-tailwind.vercel.app/",
-    code: "https://github.com/JonathanMRuiz/login-template-tailwind",
-  },
-  {
-    name: "Cards Template with Tailwind CSS",
-    img: Cards,
-    url: "https://price-cards.vercel.app/",
-    code: "https://github.com/JonathanMRuiz/card-price-template",
-  },
-
-  {
-    name: "CRUD with Context (Challenge for interview)",
-    img: Crud,
-    url: "https://mini-desafio.vercel.app/",
-    code: "https://github.com/JonathanMRuiz/mini-desafio",
-  },
-];
-
-const Projects = () => {
-  const { t } = useTranslation(["language"]);
+const MiniProjects = () => {
+  // Lista de mini proyectos
+  const projects = [
+    {
+      id: 1,
+      title: "To-Do List",
+      description: "Una aplicación simple para gestionar tareas.",
+      image: "https://via.placeholder.com/300", // URL de la imagen
+      demoLink: "https://todos-app.vercel.app", // Enlace al proyecto desplegado
+      codeLink: "https://github.com/tu-usuario/todo-app", // Enlace al código
+    },
+    {
+      id: 2,
+      title: "Clima en Tiempo Real",
+      description: "Consulta el clima actual de cualquier ciudad.",
+      image: "https://via.placeholder.com/300",
+      demoLink: "https://weather-app.vercel.app",
+      codeLink: "https://github.com/tu-usuario/weather-app",
+    },
+    {
+      id: 3,
+      title: "Calculadora",
+      description: "Una calculadora funcional con operaciones básicas.",
+      image: "https://via.placeholder.com/300",
+      demoLink: "https://calculator-app.vercel.app",
+      codeLink: "https://github.com/tu-usuario/calculator-app",
+    },
+  ];
 
   return (
-    <div name="projects" className="w-full h-full text-gray-300 bg-[#0a192f]">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 mt-10">
-            {t("project_text")}
-          </p>
-          <p className="py-6">{t("text_projects")}</p>
-          <p> {t("github_project")}</p>
-          <a
-            href="https://github.com/JonathanMRuiz"
-            target="_blank"
-            rel="noreferrer"
-            className="text-pink-400"
-          >
-            Visit my Github
-          </a>
-        </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {projectsData.map((project, idx) => (
-            <Fade key={idx} triggerOnce>
-              <div
-                style={{
-                  backgroundImage: `url(${project.img})`,
-                }}
-                className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-              >
-                <div className="opacity-0 group-hover:opacity-100 text-center">
-                  <span className="text-2xl font-bold text-white tracking-wider">
-                    {project.name}
-                  </span>
-                  <div className="pt-8 text-center">
-                    <a href={project.url} target="_blank" rel="noreferrer">
-                      <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                        Demo
-                      </button>
-                    </a>
-                    <a href={project.code} target="_blank" rel="noreferrer">
-                      <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                        Code
-                      </button>
-                    </a>
-                  </div>
-                </div>
+    <div name="projects" className="w-full min-h-screen bg-[#0a192f] text-gray-300 p-8">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold inline border-b-4 border-pink-600">
+          Mini Proyectos
+        </h2>
+        <p className="py-6">Interactúa con algunos de mis proyectos funcionales.</p>
+
+        {/* Lista de proyectos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div key={project.id} className="bg-[#112240] rounded-lg shadow-lg p-6">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-t-lg"
+              />
+              <h3 className="text-xl font-bold mt-4">{project.title}</h3>
+              <p className="text-gray-400 mt-2">{project.description}</p>
+              <div className="mt-4 flex space-x-4">
+                <a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-pink-500 hover:text-pink-400"
+                >
+                  <MdPlayArrow className="mr-2" />
+                  Demo
+                </a>
+                <a
+                  href={project.codeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-gray-400 hover:text-gray-300"
+                >
+                  <MdCode className="mr-2" />
+                  Código
+                </a>
               </div>
-            </Fade>
+            </div>
           ))}
         </div>
       </div>
@@ -141,4 +77,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default MiniProjects;

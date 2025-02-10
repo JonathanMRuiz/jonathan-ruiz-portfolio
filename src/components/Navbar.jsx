@@ -33,7 +33,7 @@ const Navbar = ({ changeSpanish, changeEnglish }) => {
     // { name: t("nav_about"), path: "/about" },
     { name: t("nav_exp"), path: "/experience" },
     { name: t("nav_skill"), path: "/skills" },
-    { name: t("nav_project"), path: "/projects" },
+    
     { name: t("nav_contact"), path: "/contact" },
   ];
 

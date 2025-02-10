@@ -68,10 +68,10 @@ const Welcome = () => {
           path="/skills"
           element={<LazyLoadedComponent component={Skills} />}
         />
-        <Route
+        {/* <Route
           path="/projects"
           element={<LazyLoadedComponent component={Projects} />}
-        />
+        /> */}
         <Route
           path="/contact"
           element={<LazyLoadedComponent component={Contact} />}
